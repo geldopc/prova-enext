@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Head = styled.div`
+  font-size: x-large;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

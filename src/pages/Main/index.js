@@ -1,15 +1,16 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import ReactCrop from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
 import { Box, Flex, SubmitButton, Message } from './styles';
 
-export default class Main extends PureComponent {
+export default class Main extends Component {
   state = {
     name: '',
     email: '',
     department: '',
     phone: '',
     message: false,
+    messageObj: {},
     src: null,
     crop: {
       unit: '%',

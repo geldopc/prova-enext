@@ -63,15 +63,20 @@ export const Message = styled.div`
   z-index: 10;
   top: 15px;
   right: 15px;
-  background: whitesmoke;
+  background: white;
   border-radius: 4px;
-  border-bottom: 3px solid #111;
+  border: 2px solid #333;
   position: absolute;
   min-width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  -webkit-box-shadow: 10px 10px 5px -8px rgba(17, 17, 17, 0.5);
+  -moz-box-shadow: 10px 10px 5px -8px rgba(17, 17, 17, 0.5);
+  box-shadow: 10px 10px 5px -8px rgba(17, 17, 17, 0.5);
   h4 {
     margin: 10px auto;
   }
