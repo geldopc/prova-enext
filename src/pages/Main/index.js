@@ -92,18 +92,27 @@ export default class Main extends Component {
 
   handleSubmit = () => {
     console.log('handleSubmit...', this);
+    const { name, email, department, phone, croppedImageUrl } = this.state;
+    const obj = {};
+    obj.name = name;
+    obj.email = email;
+    obj.department = department;
+    obj.phone = phone;
+    obj.img = croppedImageUrl;
     this.setState({
       message: true,
-      // name: '',
-      // email: '',
-      // department: '',
-      // phone: '',
+      name: '',
+      email: '',
+      department: '',
+      phone: '',
+      croppedImageUrl: '',
+      messageObj: obj,
       src: null,
     });
   };
 
   handleClose = () => {
-    console.log('handleClose...', this);
+    // console.log('handleClose...', this);
     this.setState({ message: false });
   };
 
@@ -128,6 +137,7 @@ export default class Main extends Component {
       croppedImageUrl,
       src,
       message,
+      messageObj,
     } = this.state;
 
     return (
@@ -188,16 +198,16 @@ export default class Main extends Component {
         </Box>
         {message && (
           <Message>
-            <h4>{name}</h4>
-            <h4>{email}</h4>
-            <h4>{department}</h4>
-            <h4>{phone}</h4>
+            {messageObj.name && <h4>{messageObj.name}</h4>}
+            {messageObj.email && <h4>{messageObj.email}</h4>}
+            {messageObj.department && <h4>{messageObj.department}</h4>}
+            {messageObj.phone && <h4>{messageObj.phone}</h4>}
             <div className="preview">
-              {croppedImageUrl && (
+              {messageObj.img && (
                 <img
                   alt="Crop"
                   style={{ maxWidth: '100%' }}
-                  src={croppedImageUrl}
+                  src={messageObj.img}
                 />
               )}
             </div>
