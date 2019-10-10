@@ -1,6 +1,6 @@
 Este projeto foi criado através do [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Scripts para Excução do App
 
 Dentro da pasta do projeto executar:
 
